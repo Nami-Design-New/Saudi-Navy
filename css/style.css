@@ -455,8 +455,9 @@ header nav .navMenu .navLink.btn {
     right: -100%;
     top: 0px;
     width: 100%;
-    margin-top: 100px;
-    height: calc(100vh - 100px);
+    padding-top: 25px;
+    margin-top: 75px;
+    height: calc(100vh - 75px);
     flex-direction: column;
     justify-content: start;
     background-color: var(--whiteColor);
@@ -958,6 +959,11 @@ footer .copyR img {
   font-weight: 900;
   font-size: 18px;
 }
+@media (max-width: 992px) {
+  .dataTables_wrapper .table tbody tr td p {
+    font-size: 16px;
+  }
+}
 .dataTables_wrapper .table tbody tr td span {
   font-size: 12px;
   color: #777;
@@ -980,6 +986,9 @@ footer .copyR img {
 .dataTables_wrapper table.dataTable > tbody > tr.child ul.dtr-details > li {
   border-bottom: 1px solid var(--mainColor10);
   padding: 10px 0;
+}
+.dataTables_wrapper table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+  border-bottom: none;
 }
 .dataTables_wrapper .table-striped > tbody > tr:nth-of-type(odd) > *,
 .dataTables_wrapper table.dataTable.table-striped > tbody > tr.odd {
@@ -1066,7 +1075,7 @@ footer .copyR img {
 }
 .dataTables_wrapper .dataTables_paginate {
   display: inline-flex;
-  float: right;
+  float: left;
   margin-top: 6px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -1090,15 +1099,15 @@ footer .copyR img {
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
   position: relative;
-  padding-left: 30px;
-  padding-right: 12px;
+  padding-right: 30px;
+  padding-left: 12px;
   cursor: pointer;
 }
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
   top: 50%;
-  right: unset;
-  left: 5px;
+  left: unset;
+  right: 5px;
   height: 20px;
   width: 20px;
   margin-top: -10px;

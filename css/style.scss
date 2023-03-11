@@ -362,13 +362,17 @@ header {
     gap: 8px;
     .logo {
       margin: auto 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
       img {
         height: 70px;
         transition: var(--transition);
-        width: 100%;
         object-fit: contain;
         @media (max-width: 576px) {
-          height: 35px;
+          height: 60px;
         }
       }
     }
@@ -400,8 +404,8 @@ header {
         right: -100%;
         top: 0px;
         width: 100%;
-        margin-top: 70px;
-        height: calc(100vh - 70px);
+        margin-top: 100px;
+        height: calc(100vh - 100px);
         flex-direction: column;
         justify-content: start;
         background-color: var(--whiteColor);
@@ -420,6 +424,7 @@ header {
       .dropdown {
         position: relative;
         cursor: pointer;
+        text-align: start;
         .dropdown-content {
           visibility: hidden;
           opacity: 0;
@@ -480,6 +485,7 @@ header {
       }
       .magaMenu {
         cursor: pointer;
+        text-align: start;
         .magaMenu-content {
           visibility: hidden;
           opacity: 0;
@@ -529,6 +535,9 @@ header {
             max-height: unset;
             background-color: #fafafa;
             box-shadow: none;
+            .magaMenuItem {
+              flex: 0 1 49%;
+            }
           }
           &:hover .magaMenu-content {
             opacity: 1;

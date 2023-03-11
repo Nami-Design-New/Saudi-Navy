@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #0c53a0;
   --mainColor10: #0c53a010;
@@ -327,7 +328,6 @@ content {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
   min-height: calc(100vh - 300px);
 }
 
@@ -839,4 +839,282 @@ footer .copyR img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.banner {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, rgba(12, 83, 160, 0.6980392157), rgba(12, 83, 160, 0.9176470588)), url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 50px 10px;
+  }
+}
+.banner .routeNav {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.banner .routeNav .Back {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 100%;
+  transition: var(--transition);
+  font-size: 20px;
+  border: none;
+}
+.banner .routeNav .Back img {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1);
+  filter: invert(1);
+}
+.banner .routeNav .Back:hover {
+  background-color: var(--whiteColor);
+}
+.banner .routeNav .navigetor {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+}
+.banner .routeNav .navigetor h1 {
+  font-weight: bold;
+  color: var(--whiteColor);
+  font-size: 35px;
+}
+@media (max-width: 768px) {
+  .banner .routeNav .navigetor h1 {
+    font-size: 25px;
+  }
+}
+.banner .routeNav .navigetor .links {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 8px;
+}
+.banner .routeNav .navigetor .links a {
+  color: var(--whiteColor);
+  padding: 10px 0;
+  display: flex;
+  gap: 8px;
+}
+.banner .routeNav .navigetor .links a::after {
+  content: "-";
+  color: var(--whiteColor);
+}
+.banner .routeNav .navigetor .links a:last-child {
+  color: var(--whiteColor);
+}
+.banner .routeNav .navigetor .links a:last-child::after {
+  display: none;
+}
+
+.dataTables_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--mainColor10);
+  width: calc(100% - 20px);
+  margin: 10px auto;
+}
+.dataTables_wrapper .table {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: var(--mainColor10);
+  border-radius: 16px;
+}
+.dataTables_wrapper .table thead {
+  background-color: var(--mainColor10);
+}
+.dataTables_wrapper .table thead tr th {
+  padding: 12px;
+  white-space: nowrap;
+  color: var(--mainColor);
+}
+.dataTables_wrapper .table tbody tr td {
+  padding: 20px 12px;
+  white-space: nowrap;
+}
+.dataTables_wrapper .table tbody tr td p {
+  font-weight: 900;
+  font-size: 18px;
+}
+.dataTables_wrapper .table tbody tr td span {
+  font-size: 12px;
+  color: #777;
+}
+.dataTables_wrapper .dataTables_filter label {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dataTables_wrapper .dataTables_filter label [aria-controls=DataTables_Table_0] {
+  min-height: 54px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  flex: 1;
+  padding: 12px;
+}
+.dataTables_wrapper table.dataTable > tbody > tr.child ul.dtr-details > li {
+  border-bottom: 1px solid var(--mainColor10);
+  padding: 10px 0;
+}
+.dataTables_wrapper .table-striped > tbody > tr:nth-of-type(odd) > *,
+.dataTables_wrapper table.dataTable.table-striped > tbody > tr.odd {
+  background-color: rgba(6, 37, 59, 0.0196078431);
+}
+.dataTables_wrapper .dtr-details {
+  display: flex !important;
+  flex-direction: column;
+}
+.dataTables_wrapper .dtr-details .dtr-data {
+  display: flex;
+  white-space: break-spaces;
+  flex-wrap: wrap;
+}
+.dataTables_wrapper .dtr-details li {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dataTables_wrapper .dataTables_length {
+  padding-bottom: 10px;
+}
+.dataTables_wrapper .dataTables_length label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dataTables_wrapper .dataTables_length select {
+  padding: 8px;
+  min-width: 100px;
+}
+.dataTables_wrapper table.dataTable > thead .sorting::after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc::after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc::after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::after {
+  left: 0.5em;
+  content: "↓";
+}
+.dataTables_wrapper table.dataTable > thead .sorting::before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc::before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc::before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::before {
+  left: 1em;
+  content: "↑";
+}
+.dataTables_wrapper table.dataTable > thead > tr > th:not(.sorting_disabled),
+.dataTables_wrapper table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-left: 30px;
+}
+.dataTables_wrapper table.dataTable > thead .sorting:before,
+.dataTables_wrapper table.dataTable > thead .sorting:after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc:after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled:before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled:after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: block;
+  opacity: 0.3;
+}
+.dataTables_wrapper table.dataTable > thead .sorting,
+.dataTables_wrapper table.dataTable > thead .sorting_asc,
+.dataTables_wrapper table.dataTable > thead .sorting_desc,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+.dataTables_wrapper table.dataTable > thead .sorting_asc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:after {
+  opacity: 1;
+}
+.dataTables_wrapper .dataTables_info {
+  padding: 10px 8px;
+  display: inline-flex;
+}
+.dataTables_wrapper .dataTables_paginate {
+  display: inline-flex;
+  float: right;
+  margin-top: 6px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 8px;
+  min-width: 30px !important;
+  height: 30px;
+  transition: var(--transition);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+.dataTables_wrapper .dataTables_paginate span {
+  display: inline-flex;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+  top: 50%;
+  right: unset;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  margin-top: -10px;
+  display: block;
+  position: absolute;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+  line-height: 20px;
+  content: "+";
+  background-color: var(--mainColor);
+  transition: var(--transition);
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before,
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control:before {
+  content: "-";
+  background-color: var(--mainColor);
 }/*# sourceMappingURL=style.css.map */

@@ -105,6 +105,38 @@ $(document).ready(function () {
     },
   });
 });
+$(document).ready(function () {
+  $(".datatable").DataTable({
+    // "columnDefs": [
+    //   { "orderable": false, "targets": [0] }
+    // ],
+    searching: true,
+    "lengthChange": false,
+    "language": {
+      "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+      "sInfo": "عرض السجلات _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+      "sInfoEmpty": "عرض السجلات 0 إلى 0 من أصل 0 مدخل",
+      "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+      "sInfoPostFix": "",
+      "sLengthMenu": "أظهر _MENU_ مُدخل",
+      "sLoadingRecords": "جارٍ التحميل...",
+      "sProcessing": "جارٍ المعالجة...",
+      "sSearch": "البحث:",
+      "sZeroRecords": "لم يتم العثور على أية سجلات",
+      "oPaginate": {
+        "sFirst": "الأول",
+        "sLast": "الأخير",
+        "sNext": "التالي",
+        "sPrevious": "السابق"
+      },
+      "oAria": {
+        "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+        "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+      }
+    }
+
+  });
+});
 // ////////////////////////////////////////
 // ////////////////////////////////////////
 // ////////////////////////////////////////

@@ -35,14 +35,14 @@
       margin-bottom: 0 !important;
     }
     thead {
-        background-color: #e5ded1;
-        border-radius: 16px 16px 0 0 !important;
+      background-color: #e5ded1;
+      border-radius: 16px 16px 0 0 !important;
 
       tr {
         th {
           padding: 12px !important;
           white-space: nowrap !important;
-          font-weight: bold ;
+          font-weight: bold;
         }
       }
     }
@@ -54,7 +54,6 @@
           border: 1px solid #dedede;
           p {
             font-weight: 900 !important;
-            
           }
           span {
             font-size: 12px !important;
@@ -80,6 +79,7 @@
         border-radius: 12px !important;
         flex: 1 !important;
         padding: 12px !important;
+        transition: var(--transition);
       }
     }
   }
@@ -247,9 +247,6 @@
   }
 }
 
-
-
-
 a,
 h1,
 h2,
@@ -261,13 +258,11 @@ p {
   margin: 0;
 }
 
-body{
-    font-weight: 600;
-
+body {
+  font-weight: 600;
 }
 
-
-.pageTitle{
+.pageTitle {
   border: 1px dashed var(--kt-card-border-color);
   box-shadow: var(--kt-card-box-shadow);
   background-color: var(--kt-card-bg);
@@ -277,10 +272,45 @@ body{
   border-radius: 16px;
 }
 
-
-[data-kt-app-layout=light-sidebar] .app-sidebar-menu .menu > .menu-item > .menu-link.active{
+[data-kt-app-layout="light-sidebar"]
+  .app-sidebar-menu
+  .menu
+  > .menu-item
+  > .menu-link.active {
   background-color: #e5ded1;
-  span{
+  span {
     color: var(--blackColor) !important;
   }
+}
+
+[data-theme="dark"] {
+  .dataTables_wrapper {
+    background-color: #1e1e2d !important;
+    .table {
+      background-color: #1a1a22 !important;
+
+      tbody tr td {
+        border: 1px solid #242432;
+      }
+      thead {
+        background-color: #0e0e1c;
+      }
+    }
+
+     .dataTables_filter label [aria-controls=DataTables_Table_0]{
+      background-color: #1a1a22;
+      border: 1px solid #000 !important;
+
+     }
+  }
+  [data-kt-app-layout="light-sidebar"]
+  .app-sidebar-menu
+  .menu
+  > .menu-item
+  > .menu-link.active {
+  background-color: #2d2d3a;
+  span {
+    color: var(--whiteColor) !important;
+  }
+}
 }
